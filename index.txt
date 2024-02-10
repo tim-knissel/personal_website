@@ -2,20 +2,20 @@ vCard - Personal Portfolio
 
 # sidebar
 
-alt = Richard hanrick
-Richard hanrick
+alt = Tim Knissel
+Tim Knissel
 Web developer
 
 Show Contacts
 
 Email
-richard@example.com
+tim.knissel[at]hotmail.de
 
 Phone
 +1 (213) 352-2795
 
 Birthday
-June 23, 1982
+June 23, 1996
 
 Location
 Sacramento, California, USA
