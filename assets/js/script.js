@@ -53,23 +53,24 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 const serviceItems = document.querySelectorAll('.service-item');
 
 // Loop through each service item
-serviceItems.forEach(function(serviceItem) {
-  // Add click event listener
-  serviceItem.addEventListener('click', function() {
+for (let i = 0; i < serviceItems.length; i++) {
+  serviceItems[i].addEventListener('click', function () {
     // Retrieve data from the clicked service item
     const serviceIcon = this.querySelector('.service-icon-box img').src;
     const serviceTitle = this.querySelector('.service-item-title').textContent;
     const serviceText = this.querySelector('.service-item-text').textContent;
 
-    // Perform any desired actions with the retrieved data
-    console.log('Clicked service item:');
-    console.log('Icon:', serviceIcon);
-    console.log('Title:', serviceTitle);
-    console.log('Text:', serviceText);
+    // Update modal or perform other actions with the retrieved data
+    modalImg.src = serviceIcon;
+    modalImg.alt = ''; // You might not need alt text for an icon
+    modalTitle.innerHTML = serviceTitle;
+    modalText.innerHTML = serviceText;
 
-    // Add more actions as needed
+    // Call a function if needed
+    // testimonialsModalFunc();
   });
-});
+}
+
 
 
 // add click event to modal close button
