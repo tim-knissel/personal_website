@@ -49,40 +49,58 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
-// Select all service items
-const serviceItems = document.querySelectorAll('.service-item');
-
-// Loop through each service item
-for (let i = 0; i < serviceItems.length; i++) {
-  serviceItems[i].addEventListener('click', function () {
-    // Retrieve data from the clicked service item
-    const serviceIcon = this.querySelector('.service-icon-box img').src;
-    const serviceTitle = this.querySelector('.service-item-title').textContent;
-    const serviceText = this.querySelector('.service-item-text').textContent;
-
-    // Update modal or perform other actions with the retrieved data
-    modalImg.src = serviceIcon;
-    modalImg.alt = ''; // You might not need alt text for an icon
-    modalTitle.innerHTML = serviceTitle;
-    modalText.innerHTML = serviceText;
-
-    // Call a function if needed
-    testimonialsModalFunc();
-  });
-}
-
-
-
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
+
+
+// here new
+
+// testimonials variables
+const serviceItem = document.querySelectorAll("[data-service-item]");
+//const modalContainer = document.querySelector("[data-modal-container]");
+//const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+//const overlay = document.querySelector("[data-overlay]");
+
+// modal variable
+//const modalImg = document.querySelector("[data-modal-img]");
+//const modalTitle = document.querySelector("[data-modal-title]");
+//const modalText = document.querySelector("[data-modal-text]");
+
+// modal toggle function
+const serviceModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+}
+
+// add click event to all modal items
+for (let i = 0; i < serviceItem.length; i++) {
+
+  serviceItem[i].addEventListener("click", function () {
+
+    modalImg.src = this.querySelector("[data-service-icon]").src;
+    //modalImg.alt = this.querySelector("[data-service-icon]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-service-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-service-text]").innerHTML;
+
+    serviceModalFunc();
+
+  });
+
+}
+
+// add click event to modal close button
+modalCloseBtn.addEventListener("click", serviceModalFunc);
+overlay.addEventListener("click", serviceModalFunc);
+
+// until here new
 
 
 
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
