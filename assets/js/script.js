@@ -49,6 +49,29 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
 }
 
+// Select all service items
+const serviceItems = document.querySelectorAll('.service-item');
+
+// Loop through each service item
+serviceItems.forEach(function(serviceItem) {
+  // Add click event listener
+  serviceItem.addEventListener('click', function() {
+    // Retrieve data from the clicked service item
+    const serviceIcon = this.querySelector('.service-icon-box img').src;
+    const serviceTitle = this.querySelector('.service-item-title').textContent;
+    const serviceText = this.querySelector('.service-item-text').textContent;
+
+    // Perform any desired actions with the retrieved data
+    console.log('Clicked service item:');
+    console.log('Icon:', serviceIcon);
+    console.log('Title:', serviceTitle);
+    console.log('Text:', serviceText);
+
+    // Add more actions as needed
+  });
+});
+
+
 // add click event to modal close button
 modalCloseBtn.addEventListener("click", testimonialsModalFunc);
 overlay.addEventListener("click", testimonialsModalFunc);
