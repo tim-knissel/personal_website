@@ -67,7 +67,7 @@ for (let i = 0; i < serviceItems.length; i++) {
     modalText.innerHTML = serviceText;
 
     // Call a function if needed
-    // testimonialsModalFunc();
+    testimonialsModalFunc();
   });
 }
 
