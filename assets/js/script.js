@@ -68,10 +68,10 @@ const serviceItem = document.querySelectorAll("[data-service-item]");
 //const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const serviceModalFunc = function () {
-  modalContainer.classList.toggle("active");
-  overlay.classList.toggle("active");
-}
+//const serviceModalFunc = function () {
+//  modalContainer.classList.toggle("active");
+//  overlay.classList.toggle("active");
+//}
 
 // add click event to all modal items
 for (let i = 0; i < serviceItem.length; i++) {
@@ -83,15 +83,15 @@ for (let i = 0; i < serviceItem.length; i++) {
     modalTitle.innerHTML = this.querySelector("[data-service-title]").innerHTML;
     modalText.innerHTML = this.querySelector("[data-service-text]").innerHTML;
 
-    serviceModalFunc();
+    testimonialsModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", serviceModalFunc);
-overlay.addEventListener("click", serviceModalFunc);
+//modalCloseBtn.addEventListener("click", serviceModalFunc);
+//overlay.addEventListener("click", serviceModalFunc);
 
 // until here new
 
