@@ -829,10 +829,43 @@ main {
   box-shadow: 0 0 0 4px var(--jet);
 }
 
+.timeline-entry {
+  display: inline-flex; /* Ensure elements are displayed inline */
+}
+
+.timeline-location{
+  color: var(--light-gray);
+  font-style: italic;
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+
 .timeline-text {
   color: var(--light-gray);
   font-weight: var(--fw-300);
   line-height: 1.6;
+}
+
+.icon {
+  box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 5px solid var(--light-gray);
+    border-radius: 100%;
+}
+
+.icon::after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin: 1px 0 0 -6px;
+    display: block;
+    content: '';
+    border: 6px solid transparent;
+    border-top: 10px solid var(--light-gray);
+    border-bottom: none;
 }
 
 
